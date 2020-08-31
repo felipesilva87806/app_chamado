@@ -57,6 +57,7 @@ namespace App_Chamados.Views {
         private void btn_Alterar_Click(object sender, EventArgs e) {
             textBox_nome.Enabled = true;
             textBox_login.Enabled = true;
+            textBox_senha.Enabled = true;
             textBox_email.Enabled = true;
             textBox_matricula.Enabled = true;
             btn_AtualizarDados.Enabled = true;
@@ -77,11 +78,13 @@ namespace App_Chamados.Views {
                     textBox_login.Text = string.Empty;
                     textBox_email.Text = string.Empty;
                     textBox_matricula.Text = string.Empty;
+                    textBox_senha.Text = string.Empty;
                     textBox_id.Enabled = false;
                     textBox_nome.Enabled = false;
                     textBox_login.Enabled = false;
                     textBox_email.Enabled = false;
                     textBox_matricula.Enabled = false;
+                    textBox_senha.Enabled = false;
                     btn_AtualizarDados.Enabled = false;
                     btn_Alterar.Enabled = false;
                     btn_CancelarEdit.Enabled = false;
@@ -216,7 +219,7 @@ namespace App_Chamados.Views {
                 InsertUsuarios insert = new InsertUsuarios(textBox_login.Text, textBox_senha.Text, textBox_nome.Text, textBox_email.Text, Convert.ToInt32(textBox_matricula.Text), comboBox_permissao.Text);
                 bool retorno = insert.InsereNewUsuario();
                 if (retorno == true) {
-                    MessageBox.Show("Usuário cadastrado com sucesso!",
+                    MessageBox.Show("Usuário inserido com sucesso!",
                         "Sucesso!",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);

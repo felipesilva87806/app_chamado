@@ -16,7 +16,7 @@ namespace App_Chamados.Entidades {
             if (pesquisa == string.Empty) {// caso o combox ficar em branco
                 cmd.CommandText = "SELECT " +
                     "users_id AS ID,user_login AS LOGIN,user_senha AS SENHA,user_nome AS NOME,user_email AS EMAIL,date_criado AS DATA_CRIAÇÃO,user_matricula AS MATRICULA,user_acesso AS PERMISSÕES" +
-                    " FROM users";
+                    " FROM users ORDER BY user_nome";
             }
             else {// caso receba parametros de pesquisa
                 Pesquisa = pesquisa;
