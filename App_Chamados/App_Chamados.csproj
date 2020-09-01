@@ -56,6 +56,12 @@
     <Compile Include="Entidades\PesquisaUsuario.cs" />
     <Compile Include="Entidades\ValidaLogin.cs" />
     <Compile Include="Exceptions\TrataErros.cs" />
+    <Compile Include="Views\frm_AberturaDeChamados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_AberturaDeChamados.Designer.cs">
+      <DependentUpon>frm_AberturaDeChamados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frm_CadastroDeUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <Compile Include="Views\frm_MenuPrincipal.Designer.cs">
       <DependentUpon>frm_MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\frm_AberturaDeChamados.resx">
+      <DependentUpon>frm_AberturaDeChamados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frm_CadastroDeUsuario.resx">
       <DependentUpon>frm_CadastroDeUsuario.cs</DependentUpon>
     </EmbeddedResource>

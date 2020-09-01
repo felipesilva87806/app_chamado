@@ -30,5 +30,14 @@ namespace App_Chamados.Views {
             frm_CadastroDeUsuario cad = new frm_CadastroDeUsuario();
             cad.ShowDialog();
         }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e) {
+            
+        }
+
+        private void subIncidenteToolStripMenuItem_Click(object sender, EventArgs e) {
+            frm_AberturaDeChamados abertCh = new frm_AberturaDeChamados();
+            abertCh.Show();
+        }
     }
 }

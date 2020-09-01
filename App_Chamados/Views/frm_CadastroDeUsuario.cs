@@ -139,6 +139,7 @@ namespace App_Chamados.Views {
             btn_InserirDados.Enabled = false;
             btn_AddUserNovo.Enabled = true;
             btn_ExcluirUsers.Enabled = false;
+            dataGridViewListUsers.DataSource = null;
         }
 
         private void btn_ExcluirUsers_Click(object sender, EventArgs e) {
