@@ -5,7 +5,7 @@ namespace App_Chamados.Entidades {
         MySqlConnection conn = new MySqlConnection();
 
         public ConexaoBd() {
-            conn.ConnectionString = "server=localhost; port=3306; user id=root; database=bd_chamados; password=";
+            conn.ConnectionString = "server=localhost; port=3306; user id=root; database= bd_chamados; password=";
         }
 
         public MySqlConnection Conectar() {

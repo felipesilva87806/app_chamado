@@ -1,9 +1,14 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App_Chamados.Entidades {
-    class PesquisaUsuario {
+    class PesquisaChamados {
 
         MySqlCommand cmd = new MySqlCommand();
         ConexaoBd conn = new ConexaoBd();
@@ -11,18 +16,16 @@ namespace App_Chamados.Entidades {
         public string Pesquisa { get; set; }
         public bool Retorno { get; set; }
 
-        public PesquisaUsuario(string pesquisa) {
-            if (pesquisa == string.Empty) {// caso o combox ficar em branco
-                cmd.CommandText = "SELECT " +
-                    "users_id AS ID,user_login AS LOGIN,user_senha AS SENHA,user_nome AS NOME,user_email AS EMAIL,date_criado AS DATA_CRIAÇÃO,user_matricula AS MATRICULA,user_acesso AS PERMISSÕES" +
-                    " FROM users ORDER BY user_nome";
+        public PesquisaChamados(string pesquisa,int filtro) {
+            Pesquisa = pesquisa;
+            if (pesquisa == string.Empty || filtro == 0) {
+                cmd.CommandText = "SELECT * FROM tbl_chamados";
             }
-            else {// caso receba parametros de pesquisa
-                Pesquisa = pesquisa;
-                cmd.CommandText = "SELECT " +
-                "users_id AS ID,user_login AS LOGIN,user_senha AS SENHA,user_nome AS NOME,user_email AS EMAIL,date_criado AS DATA_CRIAÇÃO,user_matricula AS MATRICULA,user_acesso AS PERMISSÕES" +
-                " FROM users " +
-                "WHERE user_nome LIKE '" + Pesquisa + "%' OR user_login LIKE '" + Pesquisa + "%'  ORDER BY user_nome";                
+            else if (filtro == 1) {
+                cmd.CommandText = $"SELECT * FROM tbl_chamados WHERE id = {Pesquisa}";
+            }
+            else if (filtro == 2) {
+                cmd.CommandText = "SELECT * FROM tbl_chamados WHERE titulo LIKE '" + Pesquisa + "%' OR descricao LIKE '" + Pesquisa + "%'";
             }
         }
 

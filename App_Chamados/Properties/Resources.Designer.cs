@@ -93,6 +93,26 @@ namespace App_Chamados.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chave {
+            get {
+                object obj = ResourceManager.GetObject("chave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checklist {
+            get {
+                object obj = ResourceManager.GetObject("checklist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edituser {
             get {
                 object obj = ResourceManager.GetObject("edituser", resourceCulture);
@@ -113,6 +133,16 @@ namespace App_Chamados.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login {
+            get {
+                object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pesquisauser {
             get {
                 object obj = ResourceManager.GetObject("pesquisauser", resourceCulture);
@@ -126,6 +156,16 @@ namespace App_Chamados.Properties {
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_login {
+            get {
+                object obj = ResourceManager.GetObject("user_login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

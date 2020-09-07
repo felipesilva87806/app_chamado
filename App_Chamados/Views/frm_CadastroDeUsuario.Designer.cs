@@ -23,8 +23,9 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CadastroDeUsuario));
             this.textBox_PesquisaUsers = new System.Windows.Forms.TextBox();
             this.dataGridViewListUsers = new System.Windows.Forms.DataGridView();
             this.textBox_id = new System.Windows.Forms.TextBox();
@@ -40,6 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox_senha = new System.Windows.Forms.TextBox();
             this.groupBox_permissoes = new System.Windows.Forms.GroupBox();
+            this.comboBox_permissao = new System.Windows.Forms.ComboBox();
             this.btn_InserirDados = new System.Windows.Forms.Button();
             this.btn_ExcluirUsers = new System.Windows.Forms.Button();
             this.btn_CancelarEdit = new System.Windows.Forms.Button();
@@ -47,7 +49,6 @@
             this.btn_Alterar = new System.Windows.Forms.Button();
             this.btn_PesquisarUsers = new System.Windows.Forms.Button();
             this.btn_AddUserNovo = new System.Windows.Forms.Button();
-            this.comboBox_permissao = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListUsers)).BeginInit();
             this.groupBox_permissoes.SuspendLayout();
             this.SuspendLayout();
@@ -59,27 +60,28 @@
             this.textBox_PesquisaUsers.MaxLength = 200;
             this.textBox_PesquisaUsers.Name = "textBox_PesquisaUsers";
             this.textBox_PesquisaUsers.Size = new System.Drawing.Size(219, 26);
-            this.textBox_PesquisaUsers.TabIndex = 3;
+            this.textBox_PesquisaUsers.TabIndex = 4;
+            this.textBox_PesquisaUsers.TextChanged += new System.EventHandler(this.textBox_PesquisaUsers_TextChanged);
             // 
             // dataGridViewListUsers
             // 
             this.dataGridViewListUsers.AllowUserToAddRows = false;
             this.dataGridViewListUsers.AllowUserToDeleteRows = false;
             this.dataGridViewListUsers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewListUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewListUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewListUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewListUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListUsers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewListUsers.Location = new System.Drawing.Point(12, 50);
             this.dataGridViewListUsers.Name = "dataGridViewListUsers";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewListUsers.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewListUsers.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewListUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewListUsers.Size = new System.Drawing.Size(681, 301);
             this.dataGridViewListUsers.TabIndex = 2;
@@ -93,7 +95,7 @@
             this.textBox_id.MaxLength = 100;
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.Size = new System.Drawing.Size(204, 26);
-            this.textBox_id.TabIndex = 5;
+            this.textBox_id.TabIndex = 6;
             // 
             // label1
             // 
@@ -123,7 +125,7 @@
             this.textBox_nome.MaxLength = 100;
             this.textBox_nome.Name = "textBox_nome";
             this.textBox_nome.Size = new System.Drawing.Size(204, 26);
-            this.textBox_nome.TabIndex = 7;
+            this.textBox_nome.TabIndex = 9;
             // 
             // label3
             // 
@@ -143,7 +145,7 @@
             this.textBox_login.MaxLength = 100;
             this.textBox_login.Name = "textBox_login";
             this.textBox_login.Size = new System.Drawing.Size(204, 26);
-            this.textBox_login.TabIndex = 9;
+            this.textBox_login.TabIndex = 7;
             // 
             // label4
             // 
@@ -163,7 +165,7 @@
             this.textBox_email.MaxLength = 100;
             this.textBox_email.Name = "textBox_email";
             this.textBox_email.Size = new System.Drawing.Size(204, 26);
-            this.textBox_email.TabIndex = 11;
+            this.textBox_email.TabIndex = 10;
             // 
             // label5
             // 
@@ -183,7 +185,7 @@
             this.textBox_matricula.MaxLength = 100;
             this.textBox_matricula.Name = "textBox_matricula";
             this.textBox_matricula.Size = new System.Drawing.Size(204, 26);
-            this.textBox_matricula.TabIndex = 13;
+            this.textBox_matricula.TabIndex = 11;
             this.textBox_matricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_matricula_KeyPress);
             // 
             // label6
@@ -204,7 +206,7 @@
             this.textBox_senha.MaxLength = 100;
             this.textBox_senha.Name = "textBox_senha";
             this.textBox_senha.Size = new System.Drawing.Size(204, 26);
-            this.textBox_senha.TabIndex = 18;
+            this.textBox_senha.TabIndex = 8;
             // 
             // groupBox_permissoes
             // 
@@ -216,6 +218,20 @@
             this.groupBox_permissoes.TabStop = false;
             this.groupBox_permissoes.Text = "Premissões";
             // 
+            // comboBox_permissao
+            // 
+            this.comboBox_permissao.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_permissao.FormattingEnabled = true;
+            this.comboBox_permissao.ItemHeight = 18;
+            this.comboBox_permissao.Items.AddRange(new object[] {
+            "0 - Usuário",
+            "1 - Adminstrador"});
+            this.comboBox_permissao.Location = new System.Drawing.Point(6, 19);
+            this.comboBox_permissao.Name = "comboBox_permissao";
+            this.comboBox_permissao.Size = new System.Drawing.Size(275, 26);
+            this.comboBox_permissao.TabIndex = 0;
+            this.comboBox_permissao.Text = "Selecione uma permissão";
+            // 
             // btn_InserirDados
             // 
             this.btn_InserirDados.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -224,7 +240,7 @@
             this.btn_InserirDados.Location = new System.Drawing.Point(702, 271);
             this.btn_InserirDados.Name = "btn_InserirDados";
             this.btn_InserirDados.Size = new System.Drawing.Size(297, 35);
-            this.btn_InserirDados.TabIndex = 21;
+            this.btn_InserirDados.TabIndex = 13;
             this.btn_InserirDados.Text = "Inserir";
             this.btn_InserirDados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_InserirDados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -238,7 +254,7 @@
             this.btn_ExcluirUsers.Location = new System.Drawing.Point(246, 9);
             this.btn_ExcluirUsers.Name = "btn_ExcluirUsers";
             this.btn_ExcluirUsers.Size = new System.Drawing.Size(108, 35);
-            this.btn_ExcluirUsers.TabIndex = 17;
+            this.btn_ExcluirUsers.TabIndex = 3;
             this.btn_ExcluirUsers.Text = "Excluir";
             this.btn_ExcluirUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ExcluirUsers.UseVisualStyleBackColor = true;
@@ -251,7 +267,7 @@
             this.btn_CancelarEdit.Location = new System.Drawing.Point(854, 312);
             this.btn_CancelarEdit.Name = "btn_CancelarEdit";
             this.btn_CancelarEdit.Size = new System.Drawing.Size(152, 39);
-            this.btn_CancelarEdit.TabIndex = 16;
+            this.btn_CancelarEdit.TabIndex = 15;
             this.btn_CancelarEdit.Text = "Cancelar";
             this.btn_CancelarEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_CancelarEdit.UseVisualStyleBackColor = true;
@@ -264,7 +280,7 @@
             this.btn_AtualizarDados.Location = new System.Drawing.Point(702, 312);
             this.btn_AtualizarDados.Name = "btn_AtualizarDados";
             this.btn_AtualizarDados.Size = new System.Drawing.Size(152, 39);
-            this.btn_AtualizarDados.TabIndex = 15;
+            this.btn_AtualizarDados.TabIndex = 14;
             this.btn_AtualizarDados.Text = "Atualizar Dados";
             this.btn_AtualizarDados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_AtualizarDados.UseVisualStyleBackColor = true;
@@ -293,7 +309,7 @@
             this.btn_PesquisarUsers.Location = new System.Drawing.Point(585, 9);
             this.btn_PesquisarUsers.Name = "btn_PesquisarUsers";
             this.btn_PesquisarUsers.Size = new System.Drawing.Size(108, 35);
-            this.btn_PesquisarUsers.TabIndex = 4;
+            this.btn_PesquisarUsers.TabIndex = 5;
             this.btn_PesquisarUsers.Text = "Pesquisar";
             this.btn_PesquisarUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_PesquisarUsers.UseVisualStyleBackColor = true;
@@ -312,19 +328,6 @@
             this.btn_AddUserNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_AddUserNovo.UseVisualStyleBackColor = true;
             this.btn_AddUserNovo.Click += new System.EventHandler(this.btn_AddUserNovo_Click);
-            // 
-            // comboBox_permissao
-            // 
-            this.comboBox_permissao.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_permissao.FormattingEnabled = true;
-            this.comboBox_permissao.Items.AddRange(new object[] {
-            "0 - Usuário",
-            "1 - Adminstrador"});
-            this.comboBox_permissao.Location = new System.Drawing.Point(6, 19);
-            this.comboBox_permissao.Name = "comboBox_permissao";
-            this.comboBox_permissao.Size = new System.Drawing.Size(275, 26);
-            this.comboBox_permissao.TabIndex = 0;
-            this.comboBox_permissao.Text = "Selecione uma permissão";
             // 
             // frm_CadastroDeUsuario
             // 
@@ -353,6 +356,7 @@
             this.Controls.Add(this.dataGridViewListUsers);
             this.Controls.Add(this.textBox_PesquisaUsers);
             this.Controls.Add(this.btn_AddUserNovo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_CadastroDeUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro De Usuário";

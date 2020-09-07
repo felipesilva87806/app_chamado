@@ -32,12 +32,13 @@ namespace App_Chamados.Views {
         }
 
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e) {
-            
+            frm_ConsultaChamado con = new frm_ConsultaChamado();
+            con.ShowDialog();
         }
 
         private void subIncidenteToolStripMenuItem_Click(object sender, EventArgs e) {
             frm_AberturaDeChamados abertCh = new frm_AberturaDeChamados();
-            abertCh.Show();
+            abertCh.ShowDialog();
         }
     }
 }

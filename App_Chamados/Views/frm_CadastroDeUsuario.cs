@@ -244,6 +244,7 @@ namespace App_Chamados.Views {
                     btn_InserirDados.Enabled = false;
                     btn_AddUserNovo.Enabled = true;
                     btn_ExcluirUsers.Enabled = false;
+                    
                 }
                 else {
                     MessageBox.Show("Usuário JÁ CADASTRADO tente novamente!",
@@ -270,6 +271,10 @@ namespace App_Chamados.Views {
                 e.Handled = true;
 
             }
+        }
+
+        private void textBox_PesquisaUsers_TextChanged(object sender, EventArgs e) {
+
         }
     }
 }

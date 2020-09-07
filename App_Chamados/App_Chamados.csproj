@@ -52,7 +52,9 @@
     <Compile Include="Entidades\AlteraUsuario.cs" />
     <Compile Include="Entidades\ConexaoBd.cs" />
     <Compile Include="Entidades\ExcluirUsuario.cs" />
+    <Compile Include="Entidades\InsertChamado.cs" />
     <Compile Include="Entidades\InsertUsuarios.cs" />
+    <Compile Include="Entidades\PesquisaChamados.cs" />
     <Compile Include="Entidades\PesquisaUsuario.cs" />
     <Compile Include="Entidades\ValidaLogin.cs" />
     <Compile Include="Exceptions\TrataErros.cs" />
@@ -67,6 +69,12 @@
     </Compile>
     <Compile Include="Views\frm_CadastroDeUsuario.Designer.cs">
       <DependentUpon>frm_CadastroDeUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_ConsultaChamado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_ConsultaChamado.Designer.cs">
+      <DependentUpon>frm_ConsultaChamado.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frm_Login.cs">
       <SubType>Form</SubType>
@@ -87,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frm_CadastroDeUsuario.resx">
       <DependentUpon>frm_CadastroDeUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_ConsultaChamado.resx">
+      <DependentUpon>frm_ConsultaChamado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
@@ -140,6 +151,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagens\verificado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\user_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\chave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\checklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -133,13 +133,25 @@
   <data name="adduser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\adduser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\user_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="edituser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\edituser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="checklist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\checklist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="verificado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\verificado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\chave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
